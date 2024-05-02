@@ -14,6 +14,9 @@ public class PlayerController : MonoBehaviour
     // UI object to display winning text.
     public GameObject winTextObject;
 
+    public AudioSource audioplayer;
+
+
     // Start is called before the first frame update.
     void Start()
     {
@@ -46,7 +49,7 @@ public class PlayerController : MonoBehaviour
     void SetCountText()
     {
         // Update the count text with the current count.
-        countText.text = "Count: " + count.ToString();
+        countText.text = "Find the 10 coffees. Count: " + count.ToString();
 
         // Check if the count has reached or exceeded the win condition.
         if (count >= 10)
@@ -55,4 +58,5 @@ public class PlayerController : MonoBehaviour
             winTextObject.SetActive(true);
         }
     }
+ 
 }
